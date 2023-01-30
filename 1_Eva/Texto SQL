@@ -1,0 +1,90 @@
+create table Tab1(
+a int not null,
+b int null
+);
+
+
+desc Tab1 -> Para mirar la tabla;
+
+insert into Tab1 values (4,5); //INSERTAR VALORES
+
+select * from Tab1 // Mostrar tabla con valores;
+
+show tables; //Mostrar Todas las tablas;
+
+create table Tab2(
+a int,
+b date default "2020-02-02"
+);
+insert into Tab2 values (4,"2022-11-02");
+insert into Tab2 (a) values (7);
+insert into Tab2 (b) values ("2022-10-01");
+insert into Tab2 values (2,null);
+
+create table Tab3(
+a int,
+b date default "2020-02-02" not null
+);
+
+insert into Tab3 values (1,"2022-11-02");
+insert into Tab3 (a) values (4);
+insert into Tab3 (b) values ("2022-10-01");
+insert into Tab3 values (14,null); //no se puede insertar
+
+
+
+create table Tab4(
+a int primary key,
+b int,
+c int
+);
+insert into Tab4 values (1,1,1);
+insert into Tab4 values (2,2,2);
+insert into Tab4 values (2,3,3);
+insert into Tab4 values (3,2,3);
+insert into Tab4 values (4,2,2);
+
+create table Tab5(
+a int,
+b int,
+c int,
+primary key(a,b)
+);
+
+insert into Tab5 values (1,1,1);
+insert into Tab5 values (2,2,2);
+insert into Tab5 values (2,3,3);
+insert into Tab5 values (3,2,3);
+insert into Tab5 values (4,2,2);
+
+
+create table Tab6(
+a int primary key,
+b int unique,
+c int
+);
+insert into Tab6 values (1,1,1);
+insert into Tab6 values (2,2,2);
+insert into Tab6 values (2,3,3);
+insert into Tab6 values (3,2,3);
+insert into Tab6 values (4,2,2);
+insert into Tab6 values (4,null,2);
+
+create table Tab7(
+a int primary key,
+b int,
+c int,
+unique(a,b)
+);
+
+insert into Tab7 values (1,1,1);
+insert into Tab7 values (2,2,2);
+insert into Tab7 values (2,3,3);
+insert into Tab7 values (3,2,3);
+insert into Tab7 values (4,2,2);
+insert into Tab7 values (4,null,2);
+
+
+update persona2 set dni =""
+
+

@@ -1,0 +1,140 @@
+1.-
+Cliente:cod_cliente(PK),Nombre,Dirección,Edad,Teléfono
+Producto:cod_producto(PK),Descripción,Precio/unidad
+Compra:cod_cliente(FK:cliente),cod_producto(FK:producto),cantidad,(PK:cod_cliente,cod_producto)
+
+2.-
+Cliente:Cod_cliente(PK),Nombre,Dirección,Edad,Teléfono
+Pedido:Cod_pedido(PK),Importe,Fecha,cod_cliente(FK:Cliente)
+
+3.-
+Alumno:Num_mat(PK),Nombre,Apellidos,Edad,Teléfono
+Asignatura:Cod_asignatura(PK),Nombre
+Esta:Nota,num_mat(FK:Alumno),cod_asig(FK:asignatura),(PK:num_mat,cod_asing)
+
+4.-
+Profesor:DNI(PK),Nombre,Dire,E,Tele
+Alumno:Num_mat(PK),N,A,DNI(FK:Profesor)
+
+5.-
+Atleta:NºDor(PK),Apellido,nombre
+De relevo: at-relevado,(FK:Atleta),(Pk)atleta_relevador(FK:Atleta)(u)
+
+6.-
+Elemento:Nombre_eleme(pk),Peso,Simbolo,Nº
+Compuesto:Nombre_compue(pk),Descrip
+
+Gaseoso:Nombre_comp(FK:compuesto)(PK),Coef_exp,Tem_lic
+Liquido:Nombre_comp(Fk:compuesto)(PK),Densidad,Temp
+Solido:Nombre_comp(fk:compuesto)(PK),Color,olor,fuerza
+
+Compuestapor:proporcion,Nombre elem(FK:elemento),Nombre_comp(FK:Compuesto)(pk:nombre_elem,nombre_comp)
+
+7.-
+Cliente:Dni(PK),Nombre,Direccion,edad,Tel
+Cuenta:Num_cuenta(pk),Saldo
+Transaccion:Fecha,Cantidad,Tipo_Operacion,NUM_CUENTA(FK:CUENTA),num_trans(pk:Num_cuenta,num_transaccn)
+Sucursal:NºSurcusal(pk),Ciudad,Activo
+Abrir:DNI(FK:CLIENTE),Num_cuenta(FK:Cuenta),NºSucursal(fk:Sucursal),(PK:DNI,NUM_CUENTA)(en sucursal no es pk pq no es (1,N))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicios 2
+
+Astros
+
+Astro: ID(PK), Nombre, Masa
+Estrella: ID(FK:astro)(ID)
+Asteroide: ID(FK:astro)(ID)
+Satélite: ID(FK:astro)(ID)
+Planeta Enano: ID(FK:astro)(ID)
+Planeta: ID(FK:astro)(ID),albedo,anillo
+Nave:Nombre(PK)
+Visita:planeta(fk:id),nave(fk:nave)(pk:id,nave)
+Orbita: ID(FK:ASTRO)(PK),radio_orbital,id_orbitado(fk:astro)
+
+Biblioteca
+
+Autor:ID(PK),Nombre
+Escribe:ID_AUTOR(FK:AUTOR),ISBN(FK:LIBRO)(PK:ISBN,ID_AUTOR)
+Libro:ISBN(PK),EDITORIAL(FK:EDITORIAL)
+Editorial:Nombre(pk)
+Volumen:ISBN(FK:libro),ID,Deteriorado(PK:ISBN,ID)
+Persona:DNI(PK),telefono,cod_socio,nombre,apellidos,direccion
+Prestamo:DNI(FK:persona),Idvolumen(fk:volumen),ISBN(fk:Volumen),fecha,fecha_limite,fecha_devolucion(PK:DNI,IDVOLUMEN,ISBN)	
+
+Empresa Alquiler CDS
+
+Titulo: NOMBRE(PK),FechaEstreno
+Expuesto: Nombre(pk)(fk:titulo)
+NoExpuesto:Nombre(pk)(fk:titulo)
+Ejemplar:codigo,Nombre(fk:titulo),PK:(Nombre,codigo)
+Cliente:Codigo(pk)
+Alquila:codigo(fk:ejemplar),codigo(fk:cliente),nombre(fk:ejemplar),fecha,fechaLim,Sancion,FechaDevo,(pk:ejemplar,codigo,nombre)
+
+IES FP
+
+Asignatura:Nombre(pk),N_Horas
+Profesor:ID(PK)
+Asiste:Nota,ID(FK:PROFESOR),ID(FK:ALUMNO),NOMBRE(FK:ASIGNATURA),(PK:ID,ID,NOMBRE)
+Alumno:ID(PK),EDAD
+Primero:id(fk:alumno)(pk)
+Segundo:ID(fk:alumno)(pk)
+Empresa:CIF(PK),Nombre
+Practicas:ID(FK:SEGUNDO)(PK),CIF(FK:EMPRESA)
+
+EMPRESA
+
+Proyecto:Cod_p(pk)
+Empleado:Cod(pk),Nombre,cod_dep(fk:Departamento),fechaincor)
+Es Jefe:Cod_empleado(fk:empleado)(pk),cod_esjefe(fk:empleado)
+Departamento:Cod_D(pk),Nombre
+Relacion:(cod_empleado(fk:empleado),cod_p(fk_proyecto),(pk:cod_e,cod_p)
+
+EDITORIAL
+
+Editorial:Nombre(pk)
+Edita:Isbn(fk:Obra),Nombre(fk:Editorial),(pk:ISBN,Nombre)
+Obra:ISBN(PK),paginas,nombre
+
+Novela:ISBN(FK:OBRA)(PK),TEMA
+Ensayo:ISBN(FK:OBRA)(PK),AREA
+Poesia:ISBN(FK:OBRA)(PK)
+
+Idioma:Nombre(pk),Hablantes
+Autor:Nombre(pk)
+Escribe:Nombre_Autor(Fk:Autor),Nombre(fk:Idioma),ISBN(FK:Obra),(pk:ISBN,NOMBRE_AUTOR)
+
+HORMIGUERO
+
+Hormiguero:Nombre(pk)
+Hormiga:ID(PK),Edad,Nombre(fk:hormiguero)
+
+Reina:ID(FK:Hormiga)(pk),N_Huevos
+Soldado:ID(FK:Hormiga)(pk)
+Obrera:ID(FK:Hormiga)(pk)
+
+Almacena:ID_Com(fk:comida)(pk),ID(fk:Obrera),ID_sala(fk:Sala),Nombre(fk:Sala)
+Comida:ID(PK)
+Sala:ID,Fecha_Const,Nombre(fk:hormiguero),(pk:ID,Nombre)
+

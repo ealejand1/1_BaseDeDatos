@@ -1,0 +1,13 @@
+1º
+select nombre as "nombre y apellido",edad,nomequipo from ciclista where edad>33 order by nomequipo;
+2º
+select numetapa,kms,salida,llegada from etapa where salida = llegada order by kms desc;
+3º
+select nombrepuerto,altura,categoria from puerto  where altura > 1500 order by altura desc,categoria desc;
+
+Cuestionario
+
+
+select Nombre,Apellido1,Apellido2,FechaNac,Provincia from nacimientos where Nombre like "a%" or Apellido1 like "a%" and Provincia != "MA";
+
+select Nombre,Apellido1,Apellido2 from nacimientos where FechaNac between '2006-05-01'and'2007-04-30' order by Apellido1 desc,Apellido2 desc;

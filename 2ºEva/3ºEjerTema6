@@ -1,0 +1,11 @@
+select nombre,nomequipo from ciclista where nombre like"____ %" and nombre < nomequipo;
+
+2º
+select dorsal,nombre from ciclista where (nombre like "% C%" and edad < 29) or (nombre like "% A%" and edad > 29);
+
+3º
+select dorsal,nombre,edad,nomequipo from ciclista where (dorsal= 2 * edad) or (nombre like "%u% %u%") order by edad desc;
+4º
+select nombrepuerto from puerto where nombrepuerto not like "%Puerto%" and nombrepuerto like "% % %";
+5º
+select distinct region,continent from Country where continent like "A%" order by continent,region;

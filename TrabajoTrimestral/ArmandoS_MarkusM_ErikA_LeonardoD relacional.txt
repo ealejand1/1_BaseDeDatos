@@ -1,0 +1,23 @@
+Modelo Relacional 
+
+Tienda : (dirección (PK) cod_postal, stock)
+Secciones:(ID_secc, dirección (FK:tienda) (PK: ID_Secc, direccion))
+Empleados :(DNI (PK) Dirección (FK:tienda),nombre)
+
+Ser Encargado (DNI(PK)(fk: empleado),DNI_encargado(FK: empleado))
+Clientes: (DNI_cliente(PK),Dirección_cliente)
+Envíos: (Cod_envío (PK) ,peso, dimensión, Fecha, Fecha_Compra,Estado_Envio)
+
+Libro:(ISBN(PK), fecha_publicacion,nombre)
+Autor:(id(pk) nombre)
+Escritos:(isbn(fk:libros) id_autor (fk:autor)(PK:libros, autor)
+
+Ejemplares:(ID_ejemplar, ISBN(FK: libro), Cod_envío(FK:envíos) Estado ,(PK:id_ejemplar, ISBN)
+ Ensayo:(ISBN(FK:ejemplares)(PK))
+ Poesía:(ISBN(FK:ejemplares)(PK))
+ Teatro:(ISBN(FK:ejemplares)(PK))
+ Novela:(ISBN(FK:ejemplares)(PK))
+Compra/venta: (DNI(FK:Empleado) DNI_cliente(FK:cliente) ISBN(FK:ejemplar) id_ejemplar(fk:ejemplar)(PK:isbn, id_ejemplar)
+Contiene:(Dirección (FK:secciones)ISBN(FK:ejemplar))
+
+

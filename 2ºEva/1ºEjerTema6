@@ -1,0 +1,8 @@
+1.-select nombre as ciclista,edad as años from ciclista order by edad asc;
+
+2º
+select distinct edad from ciclista order by edad asc;
+3º
+select distinct dorsal as ganador from etapa order by dorsal desc; 
+4º
+select distinct numetapa as "Etapa_con_puerto" from puerto order by numetapa desc;
