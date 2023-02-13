@@ -1,0 +1,485 @@
+
+insert into Tienda values ("Calle de los Quimicos 1","28222",10),
+("Plaza de la Puerta del Sol 1","28013",20),
+("Passeig de Gracia 10","08007",9),
+("Calle Colon 25","46004",13),
+("Calle Maestro Victoria 6","28013",18),
+("Calle Villaverde 65","28003",23),
+("Calle Les Glories 155",null,26),
+("Avenida Gran Via 75-93","08908",5),
+("Alcalá 96","28009",16),
+("Fuencarral 119","28010",24);
+
+insert into Secciones values(01,"Calle de los Quimicos 1"),
+(02,"Plaza de la Puerta del Sol 1"),
+(03,"Passeig de Gracia 10"),
+(04,"Calle Colon 25"),
+(05,"Calle Maestro Victoria 6"),
+(06,"Calle Villaverde 65"),
+(07,"Calle Les Glories 155"),
+(08,"Avenida Gran Via 75-93"),
+(09,"Alcalá 96");
+
+insert into Empleados values ("05392468A","Calle de los Quimicos 1","Ángela Moliner Quiroga"),
+("01481634C","Calle de los Quimicos 1","Toni Arcos Olmo"),
+("17584210C","Calle de los Quimicos 1","Paulina Iñiguez Múñiz"),
+("38257132J","Plaza de la Puerta del Sol 1","Joaquina de Royo"),
+("69758435X","Plaza de la Puerta del Sol 1","Iris Marita Prada Torrens"),
+("96046330D","Plaza de la Puerta del Sol 1","Balduino Baró"),
+("25499902D","Passeig de Gracia 10","Lino Aurelio Morante Roda"),
+("17699325C","Passeig de Gracia 10","Nacho Nieto Pino"),
+("88204061G","Passeig de Gracia 10","Victoria Blazquez Hierro"),
+("44885597Q","Calle Colon 25","Osvaldo Torre Escudero"),
+("54568269X","Calle Colon 25","Andrés Felipe Huerta Losada"),
+("24391496L","Calle Colon 25","Natalia Rojas Ángel"),
+("98040782Q","Calle Maestro Victoria 6","María Luisa Novoa"),
+("78717668F","Calle Maestro Victoria 6","Ivan Ibarra-Mesa"),
+("46727363B","Calle Maestro Victoria 6","Joel Núñez-Simó"),
+("17923668K","Calle Villaverde 65","Sebastián Cerezo Oller"),
+("83164709K","Calle Villaverde 65","Andrea Sevilla de La Concha"),
+("16109181G","Calle Villaverde 65","Jose Antonio Sanchez"),
+("16745354C","Calle Les Glories 155","María Cristina Lorenzo"),
+("28901637K","Calle Les Glories 155","David Velasco"),
+("20196618L","Calle Les Glories 155","María Carmen Ruiz"),
+("84296081T","Avenida Gran Via 75-93","María Luisa Pascual"),
+("66749222W","Avenida Gran Via 75-93","Pablo Mora"),
+("45640694T","Avenida Gran Via 75-93","Daniela Esteban"),
+("06298396F","Alcalá 96","María Soledad Delgado"),
+("51507093L","Alcalá 96","Joaquin Nieto"),
+("21852787G","Alcalá 96","Roberto Pastor"),
+("47252290D","Fuencarral 119","Felix Morales"),
+("55863078B","Fuencarral 119","Yolanda Moreno"),
+("42831820R","Fuencarral 119","Daniel Castillo");
+
+insert into SerEncargado values ("05392468A","69758435X"),
+("01481634C","69758435X"),
+("17584210C","69758435X"),
+("38257132J","69758435X"),
+("69758435X","69758435X"),
+("96046330D","69758435X"),
+("25499902D","69758435X"),
+("17699325C","69758435X"),
+("88204061G","69758435X"),
+("44885597Q","69758435X"),
+("54568269X","16745354C"),
+("24391496L","16745354C"),
+("98040782Q","16745354C"),
+("78717668F","16745354C"),
+("46727363B","16745354C"),
+("17923668K","16745354C"),
+("83164709K","16745354C"),
+("16109181G","16745354C"),
+("16745354C","16745354C"),
+("28901637K","16745354C"),
+("20196618L","66749222W"),
+("84296081T","66749222W"),
+("66749222W","66749222W"),
+("45640694T","66749222W"),
+("06298396F","66749222W"),
+("51507093L","66749222W"),
+("21852787G","66749222W"),
+("47252290D","66749222W"),
+("55863078B","66749222W"),
+("42831820R","66749222W");
+
+
+insert into Clientes values("12137174M","Travesía Conde, 25, 5º F");
+ insert into Clientes values("42034463P","Rúa Madera, 2, 0º C");
+ insert into Clientes values("11859627E","Praza Cristina, 30, 5º C");
+ insert into Clientes values("81297831F","Travessera Caldera, 209, 05º D");
+ insert into Clientes values("20096582X","Plaça Costa, 82, 39º F");
+ insert into Clientes values("35575507G","Passeig Víctor, 861, 58º E");
+ insert into Clientes values("22751503H","Rúa Eva, 635, 09º C");
+ insert into Clientes values("45792891Y","Rúa Elsa, 532, 5º D");
+ insert into Clientes values("45943159S","Camino Lucas, 60, 1º D");
+ insert into Clientes values("47472551E","Calle Mara, 130, Ático 7º");
+ insert into Clientes values("47553335F","Camiño Sotelo, 408, 13º A");
+ insert into Clientes values("48149426F","Camino Roberto, 1, 53º E");
+ insert into Clientes values("48157988J","Calle Dario, 1, Bajos");
+ insert into Clientes values("48225920A","Ronda Nieves, 37, 50º E");
+ insert into Clientes values("49211190E","Rúa Arias, 282, Entre suelo 6º");
+ insert into Clientes values("49393898H","Ronda Rafael, 262, 29º E");
+ insert into Clientes values("49592953P","Camino Teresa, 17, 7º D");
+ insert into Clientes values("49680200Q","Carrer Hernándes, 8, 01º A");
+ insert into Clientes values("50248079W","Paseo Gallardo, 697, 98º 0º");
+ insert into Clientes values("50331776W","Carrer Gaitán, 15, 91º D");
+ insert into Clientes values("99606377R","Camino Aitor, 749, 30º F");
+ insert into Clientes values("47052750V","Avenida Lira, 145, 1º E");
+ insert into Clientes values("83780728P","Travessera Adrián, 762, 33º B");
+ insert into Clientes values("93750521Z","Travessera Cornejo, 51, Entre suelo 0º");
+ insert into Clientes values("43410884V","Travesía Laura, 8, Bajo 7º");
+ insert into Clientes values("46278302W","Plaza Huerta, 862, Bajo 2º");
+ insert into Clientes values("13752418M","Camiño Rubén, 411, 8º E");
+ insert into Clientes values("38628289L","Travessera Biel, 09, Bajo 9º");
+ insert into Clientes values("55003867B","Calle de Jesús, 4, Bajos");
+ insert into Clientes values("69610358F","Calle Daniel, 612, 14º A");
+ insert into Clientes values("05094211X","Passeig Bernal, 108, 89º C");
+ insert into Clientes values("81297822F","Travessera Martín, 79, Entre suelo 3º");
+ insert into Clientes values("91435160V","Ruela Hinojosa, 07, Entre suelo 9º");
+ insert into Clientes values("75749325K","Rúa Emma, 18, 0º");
+ insert into Clientes values("42914023W","Paseo Africa, 888, Entre suelo 2º");
+ insert into Clientes values("43487213D","Travesía Rosas, 6, 7º E");
+ insert into Clientes values("57918263P","Travesía Angela, 092, Ático 3º");
+ insert into Clientes values("59198942R","Ronda Javier, 575, Bajo 6º");
+ insert into Clientes values("23087483Z","Ronda Vélez, 848, 9º");
+ insert into Clientes values("20888073W","Ruela Mario, 06, 5º D");
+ insert into Clientes values("77493211R","Carrer Cabrera, 9, 85º F");
+ insert into Clientes values("80488570R","Avenida Laia, 0, Bajos");
+
+
+insert into Envios values(1,04,'10x12',"2022-5-15","2022-5-10",'Entregado');
+insert into Envios values(2,04,'15x12',"2022-5-15","2022-5-13",'En entrega');
+insert into Envios values(3,03,'15x10',"2022-5-15","2022-5-13",'En entrega');
+insert into Envios values(4,03,'15x08',"2022-5-15","2022-5-13",'En entrega');
+insert into Envios values(5,04,'15x14',"2022-5-15","2022-5-12",'Entregado');
+insert into Envios values(6,03,'15x08',"2022-5-15","2022-5-11",'Entregado');
+insert into Envios values(7,03,'15x08',"2022-5-15","2022-5-15",'En entrega');
+insert into Envios values(8,05,'15x15',"2022-5-15","2022-5-15",'En camino');
+insert into Envios values(9,01,'15x06',"2022-5-15","2022-5-14",'En camino');
+insert into Envios values(10,03,'15x08',"2022-5-15","2022-5-11",'Entregado');
+insert into Envios values(11,04,'15x12',"2022-5-15","2022-5-11",'Entregado');
+insert into Envios values(12,03,'15x08',"2022-5-15","2022-5-12",'Entregado');
+insert into Envios values(13,04,'15x12',"2022-5-15","2022-5-15",'En entrega');
+insert into Envios values(14,04,'15x13',"2022-5-15","2022-5-15",'En camino');
+insert into Envios values(15,03,'15x08',"2022-5-15","2022-5-15",'En camino');
+insert into Envios values(16,05,'15x15',"2022-5-15","2022-5-13",'Entregado');
+insert into Envios values(17,03,'15x08',"2022-5-16","2022-5-13",'Entregado');
+insert into Envios values(18,04,'15x12',"2022-5-16","2022-5-16",'En Proceso');
+insert into Envios values(19,04,'15x14',"2022-5-16","2022-5-16",'En Proceso');
+insert into Envios values(20,01,'15x06',"2022-5-16","2022-5-12",'Entregado');
+insert into Envios values(21,02,'15x10',"2022-5-16","2022-5-12",'Entregado');
+insert into Envios values(22,05,'15x15',"2022-5-16","2022-5-13",'Entregado');
+insert into Envios values(23,05,'15x15',"2022-5-16","2022-5-13",'Entregado');
+insert into Envios values(24,02,'15x08',"2022-5-16","2022-5-13",'Entregado');
+insert into Envios values(25,01,'15x06',"2022-5-16","2022-5-16",'En camino');
+insert into Envios values(26,03,'15x10',"2022-5-16","2022-5-16",'En camino');
+insert into Envios values(27,01,'15x06',"2022-5-16","2022-5-15",'Entregado');
+insert into Envios values(28,05,'15x15',"2022-5-16","2022-5-16",'En entrega');
+insert into Envios values(29,01,'15x06',"2022-5-16","2022-5-16",'En entrega');
+insert into Envios values(30,01,'15x06',"2022-5-16","2022-5-16",'En entrega');
+insert into Envios values(31,04,'15x12',"2022-5-16","2022-5-16",'En camino');
+
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9786453543456, '1938-09-28', 'la soledad era esto');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9785345764577, '1967-04-29', 'ulises');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9783243267886, '1930-04-19', 'pedro paramo');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9788769464587, '1929-12-16', 'la maquina del tiempo');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9784354575688, '1947-05-21', 'el capital');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9787885764853, '1915-05-25', 'los sorias');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9785634847633, '1949-05-23', 'el hombre rebelde ');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9786736312789, '1960-02-26', 'las flores del mal');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9785234798532, '1980-03-11', 'facundo');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9782652484569, '1911-04-06', 'el decameron');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9783156347997, '1935-03-31', 'yo etcetera');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9784364585655, '1911-05-26', 'el trasgo');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9785235476568, '1945-02-01', 'el discurso del metodo');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9783423456537, '1978-07-21', 'hamlet');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9785374685746, '1960-04-13', 'un mundo feliz');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9788456215321, '1968-09-29', 'el remordimiento');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9786578345231, '1980-06-05', 'piedra de sol');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9787685673124, '1915-09-11', 'oriente flores');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9786575687898, '1919-05-04', 'critica a la razón pura');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9787442706737, '1951-03-21', 'hiperion');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9785458956716, '1976-01-11', 'ser y tiempo');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9789628043896, '1934-04-20', 'el primer hombre');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9782755694348, '1939-06-23', 'la odisea');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9787365156038, '1951-09-14', 'eneida');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9784351082403, '1910-11-06', 'el ruido y la furia');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9788850207059, '1941-12-30', 'fausto');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9780792835508, '1932-11-22', 'el aleph');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9787122242986, '1971-01-01', 'lolita');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9789756570429, '1943-03-12', 'don quijote');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9788069345650, '2003-09-12', 'rojo y negro');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9780829380826, '1972-07-18', 'la rebelión de atlas');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9788065255306, '1956-06-07', 'el matadero');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9781255300220, '1924-06-07', 'vigilar y castigar');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9787003368004, '1984-01-06', 'antiedipo');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9780516884321, '1936-01-29', 'el principe');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9782342344039, '1924-10-06', 'rayuela');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9785510590686, '1981-03-30', 'el limonero real');
+INSERT INTO Libro (ISBN, fecha_publicacion, nombre) VALUES (9789396063314, '1991-01-25', 'nadie nunca nada');
+
+INSERT INTO Autor (ID, nombre) VALUES (1, 'mussil');
+INSERT INTO Autor (ID, nombre) VALUES (2, 'pessoa');
+INSERT INTO Autor (ID, nombre) VALUES (3, 'levi-Strauss');
+INSERT INTO Autor (ID, nombre) VALUES (4, 'celan');
+INSERT INTO Autor (ID, nombre) VALUES (5, 'jung');
+INSERT INTO Autor (ID, nombre) VALUES (6, 'Margaret mead');
+INSERT INTO Autor (ID, nombre) VALUES (7, 'azuela');
+INSERT INTO Autor (ID, nombre) VALUES (8, 'rulfo');
+INSERT INTO Autor (ID, nombre) VALUES (9, 'Vallejo');
+INSERT INTO Autor (ID, nombre) VALUES (10, 'Garcia marquez');
+INSERT INTO Autor (ID, nombre) VALUES (11, 'vargas llosa');
+INSERT INTO Autor (ID, nombre) VALUES (12, 'roa bastos');
+INSERT INTO Autor (ID, nombre) VALUES (13, 'Onetti');
+INSERT INTO Autor (ID, nombre) VALUES (14, 'lispector');
+INSERT INTO Autor (ID, nombre) VALUES (15, 'quiroga');
+INSERT INTO Autor (ID, nombre) VALUES (16, 'sarmiento');
+INSERT INTO Autor (ID, nombre) VALUES (17, 'echeverria');
+INSERT INTO Autor (ID, nombre) VALUES (18, 'borges');
+INSERT INTO Autor (ID, nombre) VALUES (19, 'marechal');
+INSERT INTO Autor (ID, nombre) VALUES (20, 'macedonio');
+INSERT INTO Autor (ID, nombre) VALUES (21, 'cortazar');
+INSERT INTO Autor (ID, nombre) VALUES (22, 'pizarnik');
+INSERT INTO Autor (ID, nombre) VALUES (23, 'bustos');
+INSERT INTO Autor (ID, nombre) VALUES (24, 'storni');
+INSERT INTO Autor (ID, nombre) VALUES (25, 'Alberto laiseca');
+INSERT INTO Autor (ID, nombre) VALUES (26, 'fogwill');
+INSERT INTO Autor (ID, nombre) VALUES (27, 'sael');
+INSERT INTO Autor (ID, nombre) VALUES (28, 'aira');
+INSERT INTO Autor (ID, nombre) VALUES (29, 'Rodolfo Walsh');
+INSERT INTO Autor (ID, nombre) VALUES (30, 'Moffatt');
+INSERT INTO Autor (ID, nombre) VALUES (31, 'orozco');
+INSERT INTO Autor (ID, nombre) VALUES (32, 'ramponelli');
+INSERT INTO Autor (ID, nombre) VALUES (33, 'almafuerte');
+INSERT INTO Autor (ID, nombre) VALUES (34, 'jose ingenieros');
+INSERT INTO Autor (ID, nombre) VALUES (35, 'soriano');
+INSERT INTO Autor (ID, nombre) VALUES (36, 'Puig');
+INSERT INTO Autor (ID, nombre) VALUES (37, 'Homero');
+INSERT INTO Autor (ID, nombre) VALUES (38, 'Virgilio');
+
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9786453543456', 2);
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9785345764577', 2);
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9783243267886', '3');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9788769464587', '3');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9784354575688', '3');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9787885764853', '4');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9785634847633', '5');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9786736312789', '6');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9785234798532', '6');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9782652484569', '7');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9783156347997', '8');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9784364585655', '1');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9785235476568', '1');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9783423456537', '9');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9785374685746', '10');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9788456215321 ', '10');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9786578345231', '10');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9787685673124', '11');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9786575687898', '11');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9787442706737', '12');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9785458956716', '13');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9789628043896', '14');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9782755694348', '14');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9787365156038', '15');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9784351082403', '16');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9788850207059', '38');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9780792835508', '37');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9787122242986', '36');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9789756570429', '35');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9788069345650', '34');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9780829380826', '33');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9781255300220', '32');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9787003368004', '31');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9780516884321', '30');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9782342344039', '29');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9785510590686', '28');
+INSERT INTO Escritos (ISBN, ID_Autor) VALUES ('9789396063314', '27');
+
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('1', '9785345764577', '22', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('2', '9785345764577', '22', 'con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('3', '9788769464587', '22', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('4', '9787885764853', '1', 'con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('5', '9787885764853', '2', 'con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('6', '9787885764853', '2', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('7', '9786736312789', '4', 'con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('8', '9786736312789', '4', 'con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('9', '9782652484569', '4', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('10', '9784364585655', '23', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('11', '9784364585655', '23', 'con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('12', '9783423456537', '15', 'con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('13', '9788456215321', '16', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('14', '9787685673124', '16', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('15', '9787685673124', '16', 'con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('16', '9785458956716', '16', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('17', '9787442706737', '6', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('18', '9787442706737', '6', 'bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('19', '9789628043896', '6', 'Mal');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('20', '9787365156038', '3', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('21', '9787365156038', '3', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('22', '9787365156038', '5', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('23', '9788850207059', '5', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('24', '9788850207059', '5', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('25', '9787122242986', '7', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('26', '9787122242986', '7', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('27', '9788069345650', '8', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('28', '9788069345650', '8', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('29', '9788069345650', '8', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('30', '9788065255306', '21', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('31', '9788065255306', '21', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('32', '9787003368004', '21', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('33', '9787003368004', '14', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('34', '9782342344039', '14', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('35', '9782342344039', '14', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('36', '9789396063314', '9', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('37', '9789396063314', '9', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('38', '9786453543456', 'null', 'Mal');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('39', '9783243267886', '11', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('40', '9784354575688', '6', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('41', '9785634847633', '6', 'Mal');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('42', '9785234798532', '27', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('43', '9783156347997', '27', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('44', '9785235476568', '27', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('45', '9785374685746', '27', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('46', '9786578345231', '27', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('47', '9786575687898', '3', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('48', '9785458956716', '30', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('49', '9782755694348', '30', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('50', '9784351082403', '30', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('51', '9780792835508', '30', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('52', '9789756570429', '24', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('53', '9780829380826', '24', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('54', '9781255300220', '24', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('55', '9780516884321', '19', 'Bueno');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('56', '9785510590686', '19', 'Con algunos desperfectos');
+INSERT INTO Ejemplares (ID_ejemplar, ISBN, Cod_Envio, Estado) VALUES ('57', '9785510590686', '31', 'Mal');
+
+insert into Contiene values (01,"Calle de los Quimicos 1",7,'9786736312789',9),
+(01,"Calle de los Quimicos 1",3,'9788769464587',2),
+(01,"Calle de los Quimicos 1",2,'9785345764577',4),
+(01,"Calle de los Quimicos 1",39,'9783243267886',5),
+(02,"Plaza de la Puerta del Sol 1",57,'9785510590686',3),
+(02,"Plaza de la Puerta del Sol 1",56,'9785510590686',6),
+(02,"Plaza de la Puerta del Sol 1",55,'9780516884321',2),
+(02,"Plaza de la Puerta del Sol 1",53,'9780829380826',3),
+(03,"Passeig de Gracia 10",52,'9789756570429',8),
+(03,"Passeig de Gracia 10",51, '9780792835508',6),
+(04,"Calle Colon 25",50, '9784351082403',6),
+(04,"Calle Colon 25",49, '9782755694348',3),
+(04,"Calle Colon 25",48, '9785458956716',1),
+(04,"Calle Colon 25",45, '9785374685746',9),
+(05,"Calle Maestro Victoria 6",40, '9784354575688',4),
+(05,"Calle Maestro Victoria 6",41, '9785634847633',5),
+(06,"Calle Villaverde 65",37, '9789396063314',5),
+(06,"Calle Villaverde 65",27, '9788069345650',9),
+(06,"Calle Villaverde 65",24, '9788850207059',3),
+(06,"Calle Villaverde 65",23, '9788850207059',8),
+(07,"Calle Les Glories 155",11, '9784364585655',2),
+(07,"Calle Les Glories 155",12, '9783423456537',7),
+(08,"Avenida Gran Via 75-93",25, '9787122242986',7),
+(08,"Avenida Gran Via 75-93",19, '9789628043896',5),
+(08,"Avenida Gran Via 75-93",18, '9787442706737',2),
+(08,"Avenida Gran Via 75-93",17, '9787442706737',2),
+(09,"Alcalá 96",20, '9787365156038',1),
+(09,"Alcalá 96",16, '9785458956716',2),
+(09,"Alcalá 96",15, '9787685673124',2),
+(09,"Alcalá 96",14, '9787685673124',7),
+(05,"Calle Maestro Victoria 6",13, '9788456215321',4),
+(07,"Calle Les Glories 155",21, '9787365156038',6),
+(07,"Calle Les Glories 155",22, '9787365156038',4);
+
+INSERT INTO Ensayo (ISBN) VALUES ('9785345764577');
+INSERT INTO Ensayo (ISBN) VALUES ('9783243267886');
+INSERT INTO Ensayo (ISBN) VALUES ('9788769464587');
+INSERT INTO Ensayo (ISBN) VALUES ('9784354575688');
+INSERT INTO Ensayo (ISBN) VALUES ('9787885764853');
+INSERT INTO Ensayo (ISBN) VALUES ('9785634847633');
+INSERT INTO Ensayo (ISBN) VALUES ('9786736312789');
+INSERT INTO Ensayo (ISBN) VALUES ('9785234798532');
+
+
+INSERT INTO Poesia (ISBN) VALUES ('9782652484569');
+INSERT INTO Poesia (ISBN) VALUES ('9783156347997');
+INSERT INTO Poesia (ISBN) VALUES ('9784364585655');
+INSERT INTO Poesia (ISBN) VALUES ('9785235476568');
+INSERT INTO Poesia (ISBN) VALUES ('9783423456537');
+INSERT INTO Poesia (ISBN) VALUES ('9785374685746');
+INSERT INTO Poesia (ISBN) VALUES ('9788456215321');
+INSERT INTO Poesia (ISBN) VALUES ('9786578345231');
+INSERT INTO Poesia (ISBN) VALUES ('9787685673124');
+INSERT INTO Poesia (ISBN) VALUES ('9786575687898');
+INSERT INTO Poesia (ISBN) VALUES ('9787442706737');
+INSERT INTO Poesia (ISBN) VALUES ('9785458956716');
+
+INSERT INTO Teatro (ISBN) VALUES ('9789628043896');
+INSERT INTO Teatro (ISBN) VALUES ('9782755694348');
+INSERT INTO Teatro (ISBN) VALUES ('9787365156038');
+INSERT INTO Teatro (ISBN) VALUES ('9784351082403');
+INSERT INTO Teatro (ISBN) VALUES ('9788850207059');
+INSERT INTO Teatro (ISBN) VALUES ('9780792835508');
+INSERT INTO Teatro (ISBN) VALUES ('9787122242986');
+INSERT INTO Teatro (ISBN) VALUES ('9789756570429');
+
+INSERT INTO Novela (ISBN) VALUES ('9788069345650');
+INSERT INTO Novela (ISBN) VALUES ('9780829380826');
+INSERT INTO Novela (ISBN) VALUES ('9781255300220');
+INSERT INTO Novela (ISBN) VALUES ('9787003368004');
+INSERT INTO Novela (ISBN) VALUES ('9780516884321');
+INSERT INTO Novela (ISBN) VALUES ('9782342344039');
+INSERT INTO Novela (ISBN) VALUES ('9785510590686');
+INSERT INTO Novela (ISBN) VALUES ('9789396063314');
+
+insert into CompraVenta values ("01481634C","20096582X","9785345764577","1");
+insert into CompraVenta values ("17584210C","12137174M","9785345764577","2");
+insert into CompraVenta values ("38257132J","42034463P","9788769464587","3");
+insert into CompraVenta values ("69758435X","11859627E","9787885764853","4");
+insert into CompraVenta values ("96046330D","81297831F","9787885764853","5");
+insert into CompraVenta values ("25499902D","22751503H","9787885764853","6");
+insert into CompraVenta values ("17699325C","45792891Y","9786736312789","7");
+insert into CompraVenta values ("88204061G","35575507G","9786736312789","8");
+insert into CompraVenta values ("44885597Q","45943159S","9782652484569","9");
+insert into CompraVenta values ("54568269X","47472551E","9784364585655","10");
+insert into CompraVenta values ("24391496L","47553335F","9784364585655","11");
+insert into CompraVenta values ("98040782Q","48149426F","9783423456537","12");
+insert into CompraVenta values ("78717668F","48157988J","9788456215321","13");
+insert into CompraVenta values ("46727363B","48225920A","9787685673124","14");
+insert into CompraVenta values ("17923668K","49211190E","9787685673124","15");
+insert into CompraVenta values ("83164709K","49393898H","9785458956716","16");
+insert into CompraVenta values ("16109181G","49592953P","9787442706737","17");
+insert into CompraVenta values ("16745354C","49680200Q","9787442706737","18");
+insert into CompraVenta values ("28901637K","50248079W","9789628043896","19");
+insert into CompraVenta values ("20196618L","50331776W","9787365156038","20");
+insert into CompraVenta values ("84296081T","99606377R","9787365156038","21");
+insert into CompraVenta values ("66749222W","47052750V","9787365156038","22");
+insert into CompraVenta values ("45640694T","83780728P","9788850207059","23");
+insert into CompraVenta values ("06298396F","93750521Z","9788850207059","24");
+insert into CompraVenta values ("45640694T","43410884V","9787122242986","25");
+insert into CompraVenta values ("66749222W","46278302W","9787122242986","26");
+insert into CompraVenta values ("84296081T","13752418M","9788069345650","27");
+insert into CompraVenta values ("20196618L","38628289L","9788069345650","28");
+insert into CompraVenta values ("28901637K","55003867B","9788069345650","29");
+insert into CompraVenta values ("16745354C","69610358F","9788065255306","30");
+insert into CompraVenta values ("16109181G","05094211X","9788065255306","31");
+insert into CompraVenta values ("83164709K","81297822F","9787003368004","32");
+insert into CompraVenta values ("17923668K","91435160V","9787003368004","33");
+insert into CompraVenta values ("46727363B","75749325K","9782342344039","34");
+insert into CompraVenta values ("78717668F","42914023W","9782342344039","35");
+insert into CompraVenta values ("98040782Q","43487213D","9789396063314","36");
+insert into CompraVenta values ("24391496L","57918263P","9789396063314","37");
+insert into CompraVenta values ("54568269X","59198942R","9786453543456","38");
+insert into CompraVenta values ("44885597Q","23087483Z","9783243267886","39");
+insert into CompraVenta values ("88204061G","20888073W","9784354575688","40");
+insert into CompraVenta values ("17699325C","77493211R","9785634847633","41");
+insert into CompraVenta values ("25499902D","80488570R","9785234798532","42");
+insert into CompraVenta values ("96046330D","81297831F","9783156347997","43");
+insert into CompraVenta values ("69758435X","20096582X","9785235476568","44");
+insert into CompraVenta values ("38257132J","35575507G","9785374685746","45");
+insert into CompraVenta values ("17584210C","22751503H","9786578345231","46");
+insert into CompraVenta values ("01481634C","45792891Y","9786575687898","47");
+insert into CompraVenta values ("06298396F","12137174M","9785458956716","48");
+insert into CompraVenta values ("51507093L","50331776W","9782755694348","49");
+insert into CompraVenta values ("21852787G","46278302W","9784351082403","50");
+insert into CompraVenta values ("47252290D","13752418M","9780792835508","51");
+insert into CompraVenta values ("47252290D","55003867B","9789756570429","52");
+insert into CompraVenta values ("55863078B","69610358F","9780829380826","53");
+insert into CompraVenta values ("42831820R","05094211X","9781255300220","54");
+insert into CompraVenta values ("01481634C","81297822F","9780516884321","55");
+insert into CompraVenta values ("25499902D","91435160V","9785510590686","56");
+insert into CompraVenta values ("17699325C","75749325K","9785510590686","57");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

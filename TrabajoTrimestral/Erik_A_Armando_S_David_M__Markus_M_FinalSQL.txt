@@ -1,0 +1,116 @@
+
+create table Tienda(
+direccion varchar(40) primary key,
+cod_postal numeric(5),
+stock int
+);
+
+create table Secciones(
+ID_Secc int auto_increment,
+direccion varchar(40),
+foreign key (direccion)references Tienda(direccion)on delete cascade on update cascade,
+primary key(ID_Secc,direccion)
+);
+
+create table Empleados(
+DNI varchar(9) primary key,
+Direccion varchar(40),
+nombre varchar(30),
+foreign key(Direccion) references Tienda(direccion)on delete cascade on update cascade
+);
+
+create table SerEncargado(
+DNI varchar(9) primary key,
+DNI_Encargado varchar(9),
+foreign key(DNI)references Empleados(DNI)on delete cascade on update cascade,
+foreign key(DNI_Encargado)references Empleados(DNI) on delete set null on update cascade
+);
+
+
+create table Clientes(
+Dni_Cliente varchar(9) primary key,
+Direccion_Cliente varchar(40)
+);
+
+create table Envios(
+Cod_Envio int(5) auto_increment primary key,
+peso numeric(2),
+dimension varchar(5) not null,
+Fecha date,
+Fecha_Compra date,
+Estado_Envio enum('En Proceso','En camino','En entrega','Entregado'),	
+check (peso between '0' and '20')
+);
+
+create table Libro(
+ISBN numeric(13) primary key,
+fecha_publicacion date,
+nombre varchar(30)
+);
+
+create table Autor(
+ID int auto_increment primary key,
+nombre varchar(30)
+);
+
+create table Escritos(
+ISBN numeric(13),
+ID_Autor int,
+primary key(ISBN,ID_Autor),
+foreign key(ISBN)references Libro(ISBN)on delete cascade on update cascade,
+foreign key(ID_Autor)references Autor(ID)on delete cascade on update cascade
+);
+
+create table Ejemplares(     
+ID_ejemplar int auto_increment,
+ISBN numeric(13),
+Cod_Envio int(5),
+Estado enum('Mal','Bueno','Con algunos desperfectos'),
+primary key(ID_ejemplar,ISBN),
+foreign key(ISBN)references Libro(ISBN)on delete cascade on update cascade,
+foreign key(Cod_Envio)references Envios(Cod_Envio)on delete cascade on update cascade
+);
+
+create table Contiene(
+ID_sec int auto_increment,
+direccion varchar(40),
+Id_ejemplar int,
+ISBN numeric(13),
+cantidad numeric(3),
+foreign key(ID_sec,direccion)references Secciones(ID_Secc,direccion)on delete cascade on update cascade,
+foreign key(Id_ejemplar,ISBN)references Ejemplares(ID_ejemplar,ISBN)on delete cascade on update cascade,
+Primary key(ID_sec,direccion,Id_Ejemplar,ISBN)
+);
+
+create table Ensayo(
+ISBN numeric(13) primary key,
+foreign key(ISBN) references Ejemplares(ISBN)on delete cascade on update cascade
+);
+
+create table Poesia(
+ISBN numeric(13) primary key,
+foreign key(ISBN) references Ejemplares(ISBN)on delete cascade on update cascade
+);
+
+create table Teatro(
+ISBN numeric(13) primary key,
+foreign key(ISBN) references Ejemplares(ISBN)on delete cascade on update cascade
+);
+
+create table Novela(
+ISBN numeric(13) primary key,
+foreign key(ISBN) references Ejemplares(ISBN)on delete cascade on update cascade
+);
+
+create table CompraVenta(              
+DNI varchar(9),
+DNI_Cliente varchar(9),
+ISBN numeric(13),
+ID_Ejemplar int auto_increment,
+primary key(ISBN,ID_Ejemplar),
+foreign key(DNI)references Empleados(DNI)on delete set null on update cascade,
+foreign key(DNI_Cliente)references Clientes(Dni_Cliente)on delete set null on update cascade,
+foreign key(ID_Ejemplar,ISBN)references Ejemplares(ID_ejemplar,ISBN)on delete cascade on update cascade
+);
+
+
