@@ -14,7 +14,6 @@ select concat(left(nombre,1),".",apellido1," ",apellido2) as Nombre_y_apellidos 
 
 select nombre,apellido1,timestampdiff(YEAR,fechaNac,curdate()) - (select avg(timestampdiff(YEAR,fechaNac,curdate()))as media from personas) as Años_sobre_la_media from personas where (timestampdiff(YEAR,fechaNac,curdate()) - (select avg(timestampdiff(YEAR,fechaNac,curdate()))as media from personas)) > 0 and DNI in (select DNI from propietarios where matricula in (select matricula from automoviles where year(fechaPermCirc) = 2003 and (marca like "AUDI" or marca like "FORD")));
 
-//
 
 select year(fechaPermCirc) as año,max(month(fechaPermCirc)) as mes from automoviles where matricula in (select matricula from polizas where timestampdiff(month,fechaAlta,fechaBaja) > 25) group by año;
 
