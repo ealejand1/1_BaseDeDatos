@@ -22,6 +22,19 @@ select concat(nombre,".",Id_usuario) as nombre,replace(Fecha_nacimiento,"1996-11
 
 
 select DNI,Nombre from Persona where DNI in (select DNI from Protagoniza where ID_contenido in (select ID_contenido from Contenido where Idioma_original like "%castellano%"));
+//
+
+select concat(left(Nombre_L,3)," vs " ,left(Nombre_V,3)) as Emparejamientos ,Fecha_Partidos from Partidos where day(Fecha_Partidos) % 2 = 0 order by Fecha_Partidos desc;
+
+select Jornada,sum(Goles_L) as Goles_L,sum(Goles_V) as Goles_V,sum(Goles_L+Goles_V) as totalGoles from Partidos group by Jornada having totalGoles > 20;
+
+select Nombre_Estadio from Estadio_Partidos where Nombre_Estadio in();
+
+
+
+select Nombre_Estadio from Estadio where Nombre_Equipo in (select Nombre_Equipo from Personas where Nacionalidad like "AR") order by Nombre_Estadio asc;
+
+
 
 
 
