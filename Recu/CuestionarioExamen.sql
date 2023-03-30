@@ -40,5 +40,23 @@ select year(fechaPermCirc) as anio,month(fechaPermCirc) as mes,max(fechaPermCirc
 
 select year(fechaPermCirc) as anio,truncate((month(fechaPermCirc)-1)/3,0)+1 as tri,count(*) as num from automoviles where (substring(matricula,5,1) = left(marca,1)) or (substring(matricula,5,1) = left(modelo,1)) group by anio,tri having num between 2 and 10 order by anio,tri;
 
+5
+
+select matricula from automoviles where matricula not in (select matricula from polizas) and matricula in (select matricula from multas_a_vehiculos where codSancion in (select codigo from sanciones where rango like "Muy Grave") and year(fecha) = 2002 and month(fecha) between 1 and 3)
+
+select concat(apellido1,",",nombre) as nombre from personas where DNI in (select DNI from propietarios where matricula = (select matricula from multas_a_vehiculos where codSancion in (select codigo from sanciones where importe > 300) order by fecha desc limit 1));
+
+select nombre,apellido1 from personas where DNI in (select DNI from propietarios where matricula in (select matricula from (select matricula from polizas order by cuantia desc limit 5) as sel1));
+
+select nombre,apellido1 from personas where DNI in(select DNI from propietarios where matricula in (select matricula from(select matricula from multas_a_vehiculos order by fecha limit 10) as sel1));
+
+6
+
+select matricula,modelo,marca from automoviles where modelo in (select modelo from modelos where gama like "Alta") and matricula in (select matricula from propietarios where DNI in (select DNI from personas where ciudad in (select ciudad from (select ciudad,count(*) as num from personas group by ciudad having num < 2) as sel1))); 
+
+
+
+
+
 
 
