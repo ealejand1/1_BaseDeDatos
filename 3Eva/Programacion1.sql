@@ -85,10 +85,11 @@ select cast(a as char(40)) into texto;
 set  textosub =substring_index(texto,".",-1);
 if(length(textosub) < d )then
 set b=d-length(textosub);
-set final=rpad(texto,"0",b);
-end if;
+set final=rpad(texto,b+length(texto),"0");
+else
+set final=texto;
 
-return final;
+return final; 
 end //
  
 delimiter ;

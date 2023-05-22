@@ -42,3 +42,8 @@ AND    t2.nombre=t1.nombre
 AND    t1.curso=t2.curso
 AND    t1.id != t2.id;
 // REVISAR EJ3
+
+select p.id,a.nota,g.asignatura,c.finicio from persona p join alumno a join grupo g join curso c on p.id=a.ida and a.idg=g.id and g.curso=c.id;
+
+select p.id,c.finicio,avg(a.nota)from persona p join alumno a join grupo g join curso c on p.id=a.ida and a.idg=g.id and g.curso=c.id group by p.id,c.finicio;
+
